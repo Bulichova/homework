@@ -6,18 +6,22 @@ const List = styled.ul`
 `
 
 const Item = styled.li`
-  margin-right: 30px;
+  margin: 0 auto;
+`
+const Link = styled.a`
+  color: white;
 `
 
 function Navigation({ links }) {
   return (
     <nav>
       <List>
-        {links && links.map(({ id, label }) => (
-          <Item key={id}>
-            <a href="/">{label}</a>
-          </Item>
-        ))}
+        {links &&
+          links.map(({ id, label }) => (
+            <Item key={id}>
+              <Link href="/">{label}</Link>
+            </Item>
+          ))}
       </List>
     </nav>
   )

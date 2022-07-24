@@ -1,9 +1,6 @@
 import React from 'react'
-import logo from './images/logo.png'
-import Navigation from './components/Navigation'
-
-const Footer =styled.footer`
-`
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 const navLinks = [
   { id: '1', label: 'KNOW-HOW' },
@@ -15,8 +12,8 @@ const navLinks = [
 function App() {
   return (
     <div className="App">
-      <img src={logo} alt="logo" />
-      <Navigation links={navLinks} />
+      <Header links={navLinks} />
+      <Footer />
     </div>
   )
 }
