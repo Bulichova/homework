@@ -9,11 +9,13 @@ const Text = styled.p`
   font-size: 20px;
 `
 const Link = styled.a`
-color: white;
-font-size: 64px;
-display: block;
+  :hover {
+    color: blue;
+  }
+  color: white;
+  font-size: 64px;
+  display: block;
 `
-
 
 function Footer() {
   return (

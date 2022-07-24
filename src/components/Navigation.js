@@ -3,12 +3,16 @@ import styled from 'styled-components'
 
 const List = styled.ul`
   display: flex;
+  align-items: center;
 `
 
 const Item = styled.li`
   margin: 0 auto;
 `
 const Link = styled.a`
+  :hover {
+    color: blue;
+  }
   color: white;
 `
 

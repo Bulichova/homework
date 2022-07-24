@@ -1,17 +1,17 @@
 import React from 'react'
-import logo from '../images/logo.png'
 import Navigation from './Navigation'
 import styled from 'styled-components'
+import Logo from './Logo'
 
 const StyledHeader = styled.header`
-background-color: black;
-/* position: absolute; */
+  background-color: black;
+  /* position: absolute; */
 `
 
-function Header({links}) {
+function Header({ links }) {
   return (
     <StyledHeader>
-      <img src={logo} alt="logo" />
+      <Logo />
       <Navigation links={links} />
     </StyledHeader>
   )
