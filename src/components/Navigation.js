@@ -3,11 +3,13 @@ import styled from 'styled-components'
 
 const List = styled.ul`
   display: flex;
-  align-items: center;
+  margin: 0 -10px;
+  justify-content: flex-end;
 `
 
 const Item = styled.li`
-  margin: 0 auto;
+  margin: 0 10px;
+  display: flex;
 `
 const Link = styled.a`
   :hover {

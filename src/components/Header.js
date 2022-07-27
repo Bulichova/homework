@@ -5,7 +5,8 @@ import Logo from './Logo'
 
 const StyledHeader = styled.header`
   background-color: black;
-  /* position: absolute; */
+  justify-content:space-between;
+  align-items: center;
 `
 
 function Header({ links }) {
