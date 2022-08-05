@@ -23,13 +23,18 @@ const StyledLink = styled(Link)`
 `
 
 function Navigation({ links }) {
+  const handleLinkClick = (e) => {
+    console.log('click',e);
+  }
   return (
     <nav>
       <List>
         {links &&
           links.map(({ id, label, path }) => (
             <Item key={id}>
-              <StyledLink to={`/${path}`}>{label}</StyledLink>
+              <StyledLink to={`/${path}`} onClick={handleLinkClick}>
+                {label}
+              </StyledLink>
             </Item>
           ))}
       </List>
