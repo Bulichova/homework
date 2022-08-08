@@ -1,4 +1,4 @@
-import React from 'react'
+import { useContext } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { Routes, Route } from 'react-router'
@@ -8,6 +8,7 @@ import KnowNow from './pages/Know_Now'
 import ONas from './pages/O_Nas'
 import Kontakt from './pages/Kontakt'
 import Blog from './pages/Blog'
+import { AppContext } from './contexts/AppContext'
 
 const navLinks = [
   { id: '1', label: 'KNOW-HOW', path: 'know-now' },
@@ -23,20 +24,23 @@ const PageWrapper = styled.div`
 `
 
 function App() {
+  const context = useContext(AppContext)
   return (
-    <PageWrapper>
-      <Header links={navLinks} />
-      <main style={{ flex: '1 0 auto' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="know-now" element={<KnowNow />} />
-          <Route path="o-nas" element={<ONas />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="kontact" element={<Kontakt />} />
-        </Routes>
-      </main>
-      <Footer />
-    </PageWrapper>
+    <AppContext.Provider value={context}>
+      <PageWrapper>
+        <Header links={navLinks} />
+        <main style={{ flex: '1 0 auto' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="know-now" element={<KnowNow />} />
+            <Route path="o-nas" element={<ONas />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="kontact" element={<Kontakt />} />
+          </Routes>
+        </main>
+        <Footer />
+      </PageWrapper>
+    </AppContext.Provider>
   )
 }
 

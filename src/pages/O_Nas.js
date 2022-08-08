@@ -1,3 +1,5 @@
+import TrueStories from '../components/TrueStories'
+
 export default function ONas() {
-    return <h1>O_Nas</h1>
-  }
+  return <TrueStories />
+}
