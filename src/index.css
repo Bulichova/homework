@@ -30,3 +30,7 @@ a {
   display: inline-block;
   color: inherit;
 }
+button {
+  background-color: transparent;
+  border: none;
+}

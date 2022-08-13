@@ -1,3 +1,9 @@
+import { IconButton } from '../components/Button'
 export default function KnowNow() {
-    return <h1>Know_Now</h1>
-  }
+  return (
+    <h1>
+      Know_Now
+      <IconButton iconId="arrow" />
+    </h1>
+  )
+}

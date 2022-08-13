@@ -1,5 +1,5 @@
 
 
-export default function InputText(){
-    <input placeholder="" onChange={()=>{}}/>
-}
+// export default function InputText(){
+//     <input placeholder="" onChange={()=>{}}/>
+// }
